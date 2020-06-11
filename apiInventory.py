@@ -4,8 +4,6 @@ import requests
 import json
 import googleapiclient.discovery
 import sys
-import google.auth
-import google.auth.transport.requests
 import csv
 import subprocess
 import os
