@@ -70,11 +70,22 @@ def get_keys():
 
     # List available projects
     request = service.projects().list()
-    response = request.execute()
+
+    # Collect all the projects
+    projects = []
+    # Paginate through the list of all available projects
+    while request is not None:
+        response = request.execute()
+
+        projects.extend(response.get('projects', []))
+
+        request = service.projects().list_next(request, response)
+
+
     # This variable is used to hold our key JSON objects before we write to key_dump.json
     content = []
     # For each project, extract the project ID
-    for project in response.get('projects', []):
+    for project in projects:
         project_id = project['projectId']
         # Use the project ID and access token to find the API keys for each project
         keys = requests.get(
