@@ -45,5 +45,4 @@ jobs:
         uses: github/super-linter@v2.0.0
         env:
           VALIDATE_ALL_CODEBASE: false
-          VALIDATE_ANSIBLE: false
           VALIDATE_PYTHON: true
