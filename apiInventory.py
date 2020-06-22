@@ -1,12 +1,11 @@
 #!/usr/bin/env python
 
-import requests
+
 import json
-import googleapiclient.discovery
-import sys
 import csv
 import subprocess
-import os
+import requests
+import googleapiclient.discovery
 from flatten_json import flatten
 
 def get_flattened_keys(projects):
@@ -123,7 +122,7 @@ def create_service():
 def main():
     project_keys = get_keys()
 
-     # Writes our keys into a file
+    # Writes our keys into a file
     with open('key_dump.json', 'w') as f:
         formatted = json.dumps(project_keys, indent=4, sort_keys=True)
         f.write(formatted)
