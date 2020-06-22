@@ -4,9 +4,9 @@
 import json
 import csv
 import subprocess
-import requests
-import googleapiclient.discovery
-from flatten_json import flatten
+import requests # pylint: disable=import-error
+import googleapiclient.discovery # pylint: disable=import-error
+from flatten_json import flatten # pylint: disable=import-error
 
 def get_flattened_keys(projects):
     '''
