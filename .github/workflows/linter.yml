@@ -42,8 +42,8 @@ jobs:
       # Run Linter against code base #
       ################################
       - name: Lint Code Base
-        uses: github/super-linter@v3
+        uses: docker://github/super-linter:v3
         env:
           DEFAULT_BRANCH: 'main'
           VALIDATE_ALL_CODEBASE: false
-          VALIDATE_PYTHON: true
+          VALIDATE_PYTHON_PYLINT: true
