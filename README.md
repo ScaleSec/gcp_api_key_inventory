@@ -8,8 +8,8 @@ This script will inventory your entire GCP Organization's API keys and create tw
 ## Prerequisites
 - Python3
 - The following GCP roles on the Organization level:
-   - `API Keys Viewer`
-   - `Organization Administrator`
+  - `API Keys Viewer`
+  - `Organization Administrator`
 
 ## Usage
 
