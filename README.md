@@ -1,5 +1,8 @@
 # Inventory Your GCP API Keys
 
+[![GitHub Super-Linter](https://github.com/ScaleSec/gcp_api_key_inventory/workflows/Lint%20Code%20Base/badge.svg)](https://github.com/marketplace/actions/super-linter)
+
+
 This script will inventory your entire GCP Organization's API keys and create two files: `key_dump.json` and `keys.csv`. You can read the blog related to this repository [here](https://scalesec.com/blog/inventory-your-gcp-api-keys/).
 
 ## Prerequisites
